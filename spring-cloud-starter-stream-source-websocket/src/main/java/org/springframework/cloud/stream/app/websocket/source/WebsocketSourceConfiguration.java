@@ -13,7 +13,7 @@ import org.springframework.integration.websocket.inbound.WebSocketInboundChannel
 /**
  * A source module that receives data over WebSocket
  *
- * @author krishnaprasad
+ * @author Krishnaprasad A S
  *
  */
 @Configuration
@@ -34,7 +34,7 @@ public class WebsocketSourceConfiguration {
 
 	@Bean
 	public IntegrationWebSocketContainer serverWebSocketContainer() {
-		return new ServerWebSocketContainer(properties.getPath()).setAllowedOrigins("*");
+		return new ServerWebSocketContainer(properties.getPath()).setAllowedOrigins(properties.getAllowedOrigins());
 	}
 
 }
